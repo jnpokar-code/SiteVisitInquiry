@@ -1,15 +1,14 @@
 name: Build Site Visit Inquiry APK
 
-'on': workflow_dispatch: push: branches: - main
+'on':
+  workflow_dispatch:
 
-jobs: build: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v4
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
 
-- name: Java Setup uses: actions/setup-java@v5 with: distribution: temurin java-version: '17'
-
-- name: Android Setup uses: android-actions/setup-android@v3
-
-- name: Install SDK run: | sdkmanager --licenses sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
-
-- name: Build APK run: | chmod +x gradlew ./gradlew assembleDebug
-
-- name: Upload APK uses: actions/upload-artifact@v4 with: name: SiteVisitInquiry-APK path: app/build/outputs/apk/debug/app-debug.apk
+      - name: Test Workflow
+        run: echo "Workflow syntax is correct"
