@@ -1,8 +1,7 @@
 name: Build Site Visit Inquiry APK
 
 'on':
-  workflow_dispatch: 
-  push: branches: - main
+  workflow_dispatch: push: branches: - main
 
 jobs: build: runs-on: ubuntu-latest
 
