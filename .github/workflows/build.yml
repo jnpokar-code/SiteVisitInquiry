@@ -1,5 +1,9 @@
-name: Site Visit Inquiry APK
+name: Test Workflow
 
-'on': workflow_dispatch: inputs: {}
+on: workflow_dispatch
 
-jobs: test: runs-on: ubuntu-latest steps: - name: Test workflow run: echo "Workflow syntax is correct"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello"
