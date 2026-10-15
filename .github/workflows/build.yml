@@ -1,5 +1,11 @@
 name: Build Site Visit Inquiry APK
 
-on: workflow_dispatch:
+on:
+  workflow_dispatch:
 
-jobs: test: runs-on: ubuntu-latest steps: - name: Check Workflow run: echo "Site Visit Inquiry workflow is running"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Workflow
+        run: echo "Site Visit Inquiry workflow is running"
